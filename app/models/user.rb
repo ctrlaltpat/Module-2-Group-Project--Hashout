@@ -46,8 +46,6 @@ class User < ApplicationRecord
     end
   end
 
-<<<<<<< HEAD
-=======
   def random_profile_pic
     random_number = 1 + rand(98)
     random_photo = "https://randomuser.me/api/portraits/men/#{random_number}.jpg"
@@ -60,6 +58,4 @@ class User < ApplicationRecord
     end
   end
 
-
->>>>>>> remotes/origin/steve
 end
