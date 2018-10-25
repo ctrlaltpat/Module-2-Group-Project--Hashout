@@ -9,4 +9,5 @@ class Location < ApplicationRecord
   end
 
 
+
 end

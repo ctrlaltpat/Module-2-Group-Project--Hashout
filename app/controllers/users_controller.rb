@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.valid?
+      @user.default_msn_profile
       @user.save
       user = @user
       if user
@@ -42,6 +43,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    session[:user_id] = nil
+    redirect_to login_path
+  end
+
   private
 
   def user_params
@@ -51,5 +57,6 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+
 
 end
