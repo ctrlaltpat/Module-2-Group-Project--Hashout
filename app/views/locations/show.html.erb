@@ -2,13 +2,27 @@
 <br>
 
 "Location Show Page"
-
-<%= @location.name %>
+<%= image_tag asset_path("#{@location.img_url}") %>
+<br>
+<br>
+Location Name: <%= @location.name %>
+<br>
+<br>
 <%= @location.post_code %>
+<br>
+<br>
 <%= @location.address %>
+<br>
+<br>
 <%= @location.free_wifi %>
+<br>
+<br>
 <%= @location.map_link %>
-<%= @location.type %>
+<br>
+<br>
+<%= @location.location_type %>
+<br>
+<br>
 <%= @location.opening_hours %>
 <br>
 <%= @location.description %>

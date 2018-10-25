@@ -28,15 +28,31 @@ Language.create(name: "rust", description: "Rust is a bit of an upstart among th
 
 Language.create(name: "css", description: "CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content. Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.", creator: "Håkon Wium Lie; Bert Bos; World Wide Web Consortium", img_url: "/logos/css.png" )
 
-User.create(username: "Steve", password:"word")
+
+#locations
+
+Location.create(name: "The British Library", post_code: "NW1 2DB", address: "96 Euston Road, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=1770007535949962021", location_type:"Library", opening_hours:"Mon - Fri: 9:30 am - 8:00 pm", description:"Home to 150 million items, including the Magna Carta, the British Library is the world's second greatest book collection, and a must for bookworms and history buffs. Only a short walk from King's Cross, the library is free to enter and a Reader Pass is available for students and members of the public over the age of 18, via online pre-registration (you will need to demonstrate your need to use the library when applying). The tightly controlled reading rooms (water bottles and bags must be dropped off in the cloakroom and pencils are the only writing equipment permitted) are great for quiet study with an inspiring backdrop.", img_url: "/location/the.jpg")
+
+Location.create(name: "The BFI Reuben Library", post_code: "SE1 8XT", address: "Belvedere Road, Lambeth, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=16424988554026959751", location_type:"Library", opening_hours:"Mon - Fri: 10:30 am - 7:00 pm", description:"The British Film Institute is a favourite on the South Bank cultural scene with its film festivals and stylish cinema on the doorstep of the Thames. Its Reuben Library is free to the public and you simply need to fill in a registration card upon each visit to access the study spaces. When you get tired of work, enjoy the vast collection of resources about the film and television world here, from books and journals to digitised material from the National Archives.", img_url: "/location/bfi.jpg")
+
+Location.create(name: "Ozone Coffee Roasters", post_code: "EC2 4AQ", address: "11 Leonard Street, Shoreditch, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=14283034858882690770", location_type:"Cafe", opening_hours:"Mon - Fri: 7:00 am - 10:00 pm", description:"Fashionable coffeehouses are in abundance in Shoreditch, but Ozone Coffee Roasters stands out among the rest with good reason. Not only is the coffee delicious, its beautiful light-filled shop has a chic industrial feel and is decked out with plenty of spacious wood countertops, booths and benches for spreading out stacks of books and laptops. Our favourite seats are around its open kitchen and those in the downstairs roasting area.", img_url: "/location/ozone.jpg")
+
+Location.create(name: "TY Seven Dials (Timberyard)", post_code: "WC2H 9DL", address: "7 Upper St Martin's Lane, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=4607175792713443718", location_type:"Cafe", opening_hours:"Mon - Fri: 8:00 am - 6:00 pm", description:"'Tea, coffee, work and play. Reimagined' is the slogan for Timberyard, meaning workers are welcomed with a smile at this quirky coffeehouse. With two venues to choose from, the study cafés are renowned for their work-conducive environment and are usually full of young trendies typing busily away at their laptops into the evening, with a weekday 8pm closing time. Arrive early for the best seats and enjoy their buttered toast with jam; as far as simple breakfasts go, it's hard to beat.", img_url: "/location/ty.jpg")
+
+Location.create(name: "Victoria and Albert - National Art Library", post_code: "SW7 2RL", address: "Cromwell Road, Knightsbridge, London, United Kingdom", free_wifi:"Yes", map_link: "https://www.google.com/maps?cid=11397767969669218160", location_type:"Museum", opening_hours:"10:00 am - 5:45 pm", description:"The Victoria and Albert Museum (V&A) is a world-renowned destination for art and design that is home to over 2.3 million objects chronicling more than 5,000 years of human growth and creativity. In the museum there is a public reference library with free WiFi and over 1 million items from the library's collection to browse. To access the library you can register on the Victoria and Albert Museum's website.", img_url: "/location/victoria.jpg")
+
+User.create(username: "Steve", password:"word" )
 User.create(username: "Pat", password:"word" )
 User.create(username: "Olly", password:"word" )
 User.create(username: "John", password:"word" )
-
-Location.create(name: "Park")
-Location.create(name: "Bar")
-Location.create(name: "Costa")
-Location.create(name: "Town")
+User.create(username: "Steve", password:"word")
+User.create(username: "Simon", password:"word" )
+User.create(username: "Lopez", password:"word" )
+User.create(username: "Johnsalty", password:"word" )
+User.create(username: "Stevepopcorn", password:"word")
+User.create(username: "Patper", password:"word" )
+User.create(username: "Pepper", password:"word" )
+User.create(username: "Lemon", password:"word" )
 
 Function.create(topic: "learn", location_id:1)
 Function.create(topic: "dontlearn", location_id: 4)
@@ -45,17 +61,23 @@ Function.create(topic: "Flatiron", location_id: 1)
 
 #joinclass's
 
-
 UserLanguage.create(user_id: 1, language_id: 1)
 UserLanguage.create(user_id: 2, language_id: 2)
-UserLanguage.create(user_id: 3, language_id: 3)
+UserLanguage.create(user_id: 3, language_id: 5)
 UserLanguage.create(user_id: 3, language_id: 3)
 UserLanguage.create(user_id: 3, language_id: 4)
-UserLanguage.create(user_id: 3, language_id: 5)
-UserLanguage.create(user_id: 3, language_id: 6)
-UserLanguage.create(user_id: 3, language_id: 6)
-UserLanguage.create(user_id: 3, language_id: 7)
+UserLanguage.create(user_id: 4, language_id: 5)
+UserLanguage.create(user_id: 5, language_id: 6)
+UserLanguage.create(user_id: 6, language_id: 6)
+UserLanguage.create(user_id: 7, language_id: 7)
+UserLanguage.create(user_id: 8, language_id: 4)
+
 UserLanguage.create(user_id: 3, language_id: 1)
+UserLanguage.create(user_id: 2, language_id: 1)
+UserLanguage.create(user_id: 3, language_id: 1)
+UserLanguage.create(user_id: 1, language_id: 1)
+UserLanguage.create(user_id: 4, language_id: 1)
+
 
 UserFunction.create(user_id: 1, function_id: 4)
 UserFunction.create(user_id: 2, function_id: 2)
