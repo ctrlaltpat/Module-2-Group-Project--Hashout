@@ -11,11 +11,15 @@ class User < ApplicationRecord
 
 
   def last_function
-    self.function.last
+    if self.function
+      self.function.last
+    end
   end
 
   def full_name
-    "#{firstname.capitalize} #{lastname.capitalize}"
+    if self.firstname && self.lastname
+      "#{firstname.capitalize} #{lastname.capitalize}"
+    end
   end
 
 
@@ -39,7 +43,5 @@ class User < ApplicationRecord
       "https://www.facebook.com/#{self.facebook}"
     end
   end
-
-
 
 end

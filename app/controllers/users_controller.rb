@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    authorized_for(params[:id])
   end
 
   def create
