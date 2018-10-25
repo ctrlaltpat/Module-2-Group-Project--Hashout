@@ -1,15 +1,31 @@
-<div class="main">
 
-  <%= @location.name %>
-  <%= @location.post_code %>
-  <%= @location.address %>
-  <%= @location.free_wifi %>
-  <%= @location.map_link %>
-  <%= @location.type %>
-  <%= @location.opening_hours %>
-  <br>
-  <%= @location.description %>
+<br>
 
-  <br>
-  <%= link_to "Go Back", locations_path %>
-</div>
+"Location Show Page"
+<%= image_tag asset_path("#{@location.img_url}") %>
+<br>
+<br>
+Location Name: <%= @location.name %>
+<br>
+<br>
+<%= @location.post_code %>
+<br>
+<br>
+<%= @location.address %>
+<br>
+<br>
+<%= @location.free_wifi %>
+<br>
+<br>
+<%= @location.map_link %>
+<br>
+<br>
+<%= @location.location_type %>
+<br>
+<br>
+<%= @location.opening_hours %>
+<br>
+<%= @location.description %>
+
+<br>
+<%= link_to "Go Back", locations_path %>

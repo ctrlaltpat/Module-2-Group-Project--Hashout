@@ -6,7 +6,7 @@ class CreateLocations < ActiveRecord::Migration[5.2]
       t.string :address
       t.boolean :free_wifi
       t.string :map_link
-      t.string :type
+      t.string :location_type
       t.string :opening_hours
       t.string :description
 

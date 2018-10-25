@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_23_124338) do
+ActiveRecord::Schema.define(version: 2018_10_25_160334) do
 
   create_table "functions", force: :cascade do |t|
     t.datetime "time"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_10_23_124338) do
     t.string "creator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -36,11 +37,12 @@ ActiveRecord::Schema.define(version: 2018_10_23_124338) do
     t.string "address"
     t.boolean "free_wifi"
     t.string "map_link"
-    t.string "type"
+    t.string "location_type"
     t.string "opening_hours"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "user_functions", force: :cascade do |t|
