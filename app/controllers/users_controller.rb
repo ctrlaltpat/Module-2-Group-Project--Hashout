@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    authorized_for(params[:id])
   end
 
   def update
@@ -43,7 +44,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :firstname, :lastname, :email, :postcode, :photo, :experience, :bio, :facebook, :twitter, :github, :website)
   end
 
   def set_user

@@ -46,6 +46,7 @@ Function.create(topic: "Flatiron", location_id: 1)
 
 #joinclass's
 
+
 UserLanguage.create(user_id: 1, language_id: 1)
 UserLanguage.create(user_id: 2, language_id: 2)
 UserLanguage.create(user_id: 3, language_id: 3)
@@ -56,11 +57,6 @@ UserLanguage.create(user_id: 3, language_id: 6)
 UserLanguage.create(user_id: 3, language_id: 6)
 UserLanguage.create(user_id: 3, language_id: 7)
 UserLanguage.create(user_id: 3, language_id: 1)
-
-
-
-
-
 
 UserFunction.create(user_id: 1, function_id: 4)
 UserFunction.create(user_id: 2, function_id: 2)

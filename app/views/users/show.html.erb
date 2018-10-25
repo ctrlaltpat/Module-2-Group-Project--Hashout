@@ -5,16 +5,24 @@ User Show Page
   <p><%= flash[:authorized]%></p>
 <% end %>
 
-<br>
 
-<%= @user.username %>
-<%= @user.firstname %>
-<%= @user.lastname %>
-<%= @user.photo %>
-<%= @user.experience %>
-<%= @user.bio %>
-<%= @user.facebook %>
-<%= @user.twitter %>
-<%= @user.github %>
-<%= @user.website %>
+<img src="<%= @user.photo %>" alt="user_image">
+
+Full Name: <%= @user.full_name %>
+<br>
+Experience: <%= @user.experience %>
+<br>
+Bio: <%= @user.bio %>
+<br>
+<br>
+<p>Social media</p>
+Facebook: <a href="<%= @user.facebook_url %>" target="_blank"><%= "#{@user.facebook}" %></a>
+<br>
+Twitter: <a href="<%= @user.twitter_url%>" target="_blank"><%= "#{@user.twitter}" %></a>
+<br>
+Github: <a href="<%= @user.github_url %>" target="_blank"><%= "#{@user.github}" %> </a>
+<br>
+<a href"<%= @user.website %>" target="_blank">Website(please enter full url https://...): </a>
+
+<br>
 <%=  "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %>

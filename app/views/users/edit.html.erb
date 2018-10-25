@@ -1,4 +1,5 @@
-User Profile
+<h2>User Profile</h2>
+<br>
 
 <%= form_for @user do |f| %>
   <%= f.label :username, "Username: "%>
@@ -25,14 +26,15 @@ User Profile
   <%= f.label :bio, "Bio" %>
   <%= f.text_area :bio, class: 'form-control' %>
 <p>Social Media</p>
+
   <br>
-  <%= f.label :facebook %>
+  <%= f.label :facebook, "Facebook Username:" %>
   <%= f.text_field :facebook, class: 'form-control' %>
   <br>
-  <%= f.label :twitter %>
+  <%= f.label :twitter, "Twitter Username:" %>
   <%= f.text_field :twitter, class: 'form-control' %>
   <br>
-  <%= f.label :github %>
+  <%= f.label :github, "Github Username:"%>
   <%= f.text_field :github, class: 'form-control' %>
   <br>
   <%= f.label :website %>
