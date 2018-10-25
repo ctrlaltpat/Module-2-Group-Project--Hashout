@@ -1,19 +1,21 @@
-<br>
-Language Name: <%= @language.name.capitalize %>
-<br>
-<br>
-<%= "Join #{pluralize(@language.number_of_users, 'User')}, studying this language!.Head over to our " %><%= link_to "functions", functions_path %><%= " page, to see how you can get involved." %>
-<br>
-<br>
-<%=  "#{@language.name.capitalize} has had " %><%= link_to "hashouts", locations_path %><%= " in #{pluralize(@language.number_of_locations, 'location')}." %>
-<br>
-<br>
-Language Description:
-<br>
-<%= @language.description %>
-<br>
-<br>
-Language Creator: <%= @language.creator %>
-<br>
+<div class="main">
+  <br>
+  Language Name: <%= @language.name.capitalize %>
+  <br>
+  <br>
+  <%= "Join #{pluralize(@language.number_of_users, 'User')}, studying this language!.Head over to our " %><%= link_to "functions", functions_path %><%= " page, to see how you can get involved." %>
+  <br>
+  <br>
+  <%=  "#{@language.name.capitalize} has had " %><%= link_to "hashouts", locations_path %><%= " in #{pluralize(@language.number_of_locations, 'location')}." %>
+  <br>
+  <br>
+  Language Description:
+  <br>
+  <%= @language.description %>
+  <br>
+  <br>
+  Language Creator: <%= @language.creator %>
+  <br>
 
-<%= link_to "Go Back", languages_path %>
+  <%= link_to "Go Back", languages_path %>
+</div>

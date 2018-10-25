@@ -1,36 +1,42 @@
-<% if flash[:authorized] %>
-  <div class="alert alert-dismissible alert-warning">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">Warning!</h4>
-    <p class="mb-0"><%= flash[:authorized]%><a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+<div class="main">
+  <% if flash[:authorized] %>
+    <div class="alert alert-dismissible alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4 class="alert-heading">Warning!</h4>
+      <p class="mb-0"><%= flash[:authorized]%><a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+    </div>
+  <% end %>
+
+  <div class="user_show container">
+
+    <div class="user_show_img_holder">
+      <img src="<%= @user.photo %>" alt="user_image">
+    </div>
+    <div class="user_basic">
+      <h2>#<%= @user.username %></h2>
+      <h3><%= @user.full_name %></h3>
+      <p>{ <%= "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %> }</p>
+    </div>
+    <div class="user_social">
+      <a href="<%= @user.facebook_url %>" target="_blank"><i class="fab fa-facebook"></i></a>
+
+      <a href="<%= @user.twitter_url%>" target="_blank"><i class="fab fa-twitter"></i></a>
+
+      <a href="<%= @user.github_url %>" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="user_bio">
+      <h4>Experience:</h4>
+      <p><%= @user.experience %></p>
+      <h4>Bio:</h4>
+      <p><%= @user.bio %></p>
+
+      <a href"<%= @user.website %>" target="_blank"> </a>
+    </div>
+
+    <div class="button-group user_buttons">
+      <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-primary" %>
+
+      <%= link_to "Delete Account", user_path(@user), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure?"} %>
+    </div>
   </div>
-<% end %>
-
-<div class="user_show">
-
-  <div class="user_show_img_holder">
-    <img src="<%= @user.photo %>" alt="user_image">
-  </div>
-
-  Full Name: <%= @user.full_name %>
-  <br>
-  Experience: <%= @user.experience %>
-  <br>
-  Bio: <%= @user.bio %>
-  <br>
-  <br>
-  <p>Social media</p>
-  <i class="fab fa-facebook"> Facebook: </i><a href="<%= @user.facebook_url %>" target="_blank"><%= "#{@user.facebook}" %></a>
-  <br>
-  <i class="fab fa-twitter"> Twitter: </i><a href="<%= @user.twitter_url%>" target="_blank"><%= "#{@user.twitter}" %></a>
-  <br>
-  <i class="fab fa-github"> Github: </i><a href="<%= @user.github_url %>" target="_blank"><%= "#{@user.github}" %> </a>
-  <br>
-  <a href"<%= @user.website %>" target="_blank">Website(please enter full url https://...): </a>
-
-  <br>
-  <%=  "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %>
-  <%= link_to "Edit Page", edit_user_path(@user) %>
-  <br>
-  <%= link_to "Delete Page", user_path(@user), method: :delete %>
 </div>

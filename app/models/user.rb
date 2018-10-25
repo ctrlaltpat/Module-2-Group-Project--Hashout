@@ -54,7 +54,7 @@ class User < ApplicationRecord
 
   def default_msn_profile
     if self.photo == nil
-      self.photo = "http://files.softicons.com/download/application-icons/msn-icons-by-chris-scholten/png/256x256/default-red.png"
+      self.photo = "/default/oliver.png"
     end
   end
 

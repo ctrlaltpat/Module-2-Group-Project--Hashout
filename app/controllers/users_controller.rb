@@ -20,6 +20,7 @@ class UsersController < ApplicationController
         session[:user_id] = user.id
         redirect_to user_path(user) #user taken to profile page
       else
+        flash[:errors] = @user.errors.full_messages
         redirect_to register_path #user not valid has to register
       end
     end

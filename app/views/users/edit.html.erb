@@ -1,44 +1,45 @@
-<h2>User Profile</h2>
-<br>
+<div class="main">
+  <div class="container user_edit_form">
+    <%= form_for @user do |f| %>
+      <%= f.label :username, "Username: "%>
+      <%= f.text_field :username, class: 'form-control' %>
+      <br>
+      <%= f.label :firstname, "First Name: " %>
+      <%= f.text_field :firstname, class: 'form-control' %>
+      <br>
+      <%= f.label :lastname, "Last Name: "%>
+      <%= f.text_field :lastname, class: 'form-control' %>
+      <br>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+      <br>
+      <%= f.label :postcode %>
+      <%= f.text_field :postcode, class: 'form-control' %>
+      <br>
+      <%= f.label :photo, "Display Picture(Please enter a valid URL)" %>
+      <%= f.text_field :photo, class: 'form-control' %>
+      <br>
+      <%= f.label :experience, "How long have you been coding, and in what Languages?" %>
+      <%= f.text_area :experience, class: 'form-control' %>
+      <br>
+      <%= f.label :bio, "Bio" %>
+      <%= f.text_area :bio, class: 'form-control' %>
+    <p>Social Media</p>
 
-<%= form_for @user do |f| %>
-  <%= f.label :username, "Username: "%>
-  <%= f.text_field :username, class: 'form-control' %>
-  <br>
-  <%= f.label :firstname, "First Name: " %>
-  <%= f.text_field :firstname, class: 'form-control' %>
-  <br>
-  <%= f.label :lastname, "Last Name: "%>
-  <%= f.text_field :lastname, class: 'form-control' %>
-  <br>
-  <%= f.label :email %>
-  <%= f.text_field :email, class: 'form-control' %>
-  <br>
-  <%= f.label :postcode %>
-  <%= f.text_field :postcode, class: 'form-control' %>
-  <br>
-  <%= f.label :photo, "Display Picture(Please enter a valid URL)" %>
-  <%= f.text_field :photo, class: 'form-control' %>
-  <br>
-  <%= f.label :experience, "How long have you been coding, and in what Languages?" %>
-  <%= f.text_area :experience, class: 'form-control' %>
-  <br>
-  <%= f.label :bio, "Bio" %>
-  <%= f.text_area :bio, class: 'form-control' %>
-<p>Social Media</p>
-
-  <br>
-  <%= f.label :facebook, "Facebook Username:" %>
-  <%= f.text_field :facebook, class: 'form-control' %>
-  <br>
-  <%= f.label :twitter, "Twitter Username:" %>
-  <%= f.text_field :twitter, class: 'form-control' %>
-  <br>
-  <%= f.label :github, "Github Username:"%>
-  <%= f.text_field :github, class: 'form-control' %>
-  <br>
-  <%= f.label :website %>
-  <%= f.text_field :website, class: 'form-control' %>
-  <br>
-  <%= f.submit 'Save', class: 'form-control btn' %>
-<% end %>
+      <br>
+      <%= f.label :facebook, "Facebook Username:" %>
+      <%= f.text_field :facebook, class: 'form-control' %>
+      <br>
+      <%= f.label :twitter, "Twitter Username:" %>
+      <%= f.text_field :twitter, class: 'form-control' %>
+      <br>
+      <%= f.label :github, "Github Username:"%>
+      <%= f.text_field :github, class: 'form-control' %>
+      <br>
+      <%= f.label :website %>
+      <%= f.text_field :website, class: 'form-control' %>
+      <br>
+      <%= f.submit 'Save', class: 'form-control btn' %>
+    <% end %>
+  </div>
+</div>

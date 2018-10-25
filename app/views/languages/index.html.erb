@@ -1,8 +1,10 @@
-<br>
+<div class="main">
+  <br>
 
-  <% @languages.each do |language| %>
-    <%= link_to language.name, language_path(language)  %>
-    <%= "#{pluralize(language.number_of_users, 'coder')} studying this language!" %>
-    <br>
-    <hr>
-  <% end %>
+    <% @languages.each do |language| %>
+      <%= link_to language.name, language_path(language)  %>
+      <%= "#{pluralize(language.number_of_users, 'coder')} studying this language!" %>
+      <br>
+      <hr>
+    <% end %>
+</div>

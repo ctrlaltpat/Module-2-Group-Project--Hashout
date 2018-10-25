@@ -10,6 +10,14 @@ class Function < ApplicationRecord
     self.users.map {|user| "#{user.username}" }.join(", ")
   end
 
+  def function_name
+    self.topic.downcase + "_at_" + self.location.name + "_with(" + self.users_as_params + ") {"
+  end
+
+  def short_name
+    self.topic.downcase + "_at_" + self.location.name
+  end
+
   def space
     self.capacity = self.users.count
   end

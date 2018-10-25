@@ -10,4 +10,10 @@
     <% end %>
   </div>
 </div>
-<%# <img src="https://picsum.photos/2000/600/?random" class="img-fluid" alt="Responsive image"> %>
+<div class="main">
+  <div class="latest_functions">
+    <% @functions.each do |f| %>
+    <%= link_to f.short_name, function_path(f), class: "btn btn-primary btn-sm" %>
+    <% end %>
+  </div>
+</div>
