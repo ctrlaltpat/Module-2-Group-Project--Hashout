@@ -1,1 +1,13 @@
-<p><%= session[:user_id] %></p>
+<div id="custom_banner">
+  <div class="custom_banner_inner">
+    <% if !logged_in? %>
+      <h1>Learning to code?</h1>
+      <span>Don't do it alone!</span><br><br>
+      <%= link_to "Sign Up", register_path, class: "btn btn-primary btn-lg" %>
+    <% else %>
+      <h1>HashOut!</h1>
+      <%= link_to "Define a new function :)", new_function_path, class: "btn btn-primary btn-lg" %>
+    <% end %>
+  </div>
+</div>
+<%# <img src="https://picsum.photos/2000/600/?random" class="img-fluid" alt="Responsive image"> %>

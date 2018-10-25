@@ -2,7 +2,11 @@
 <h2>User Show Page</h2>
 <br>
 <% if flash[:authorized] %>
-  <p><%= flash[:authorized]%></p>
+  <div class="alert alert-dismissible alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <h4 class="alert-heading">Warning!</h4>
+    <p class="mb-0"><%= flash[:authorized]%><a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+  </div>
 <% end %>
 <div class="container">
   <br>

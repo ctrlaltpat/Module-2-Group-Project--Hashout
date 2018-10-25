@@ -11,7 +11,9 @@ class User < ApplicationRecord
 
 
   def last_function
-    self.function.last
+    if self.function
+      self.function.last
+    end
   end
 
   def full_name
