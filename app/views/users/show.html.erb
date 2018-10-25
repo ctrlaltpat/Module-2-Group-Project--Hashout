@@ -1,28 +1,32 @@
 <br>
-User Show Page
+<h2>User Show Page</h2>
 <br>
 <% if flash[:authorized] %>
   <p><%= flash[:authorized]%></p>
 <% end %>
+<div class="container">
+  <br>
+  <img src="<%= @user.photo %>" alt="user_image">
+  <br>
+  Full Name: <%= @user.full_name %>
+  <br>
+  Experience: <%= @user.experience %>
+  <br>
+  Bio: <%= @user.bio %>
+  <br>
+  <br>
+  <p>Social media</p>
+  <i class="fab fa-facebook"> Facebook: </i><a href="<%= @user.facebook_url %>" target="_blank"><%= " #{@user.facebook}" %></a>
+  <br>
+  <i class="fab fa-twitter"> Twitter: </i><a href="<%= @user.twitter_url%>" target="_blank"><%= " #{@user.twitter}" %></a>
+  <br>
+  <i class="fab fa-github"> Github: </i><a href="<%= @user.github_url %>" target="_blank"><%= " #{@user.github}" %> </a>
+  <br>
+  <br>
+  <a href"<%= @user.website %>" target="_blank">Website(please enter full url https://...): </a>
 
+  <br>
+  <%=  "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %>
+</div>
 
-<img src="<%= @user.photo %>" alt="user_image">
-
-Full Name: <%= @user.full_name %>
-<br>
-Experience: <%= @user.experience %>
-<br>
-Bio: <%= @user.bio %>
-<br>
-<br>
-<p>Social media</p>
-Facebook: <a href="<%= @user.facebook_url %>" target="_blank"><%= "#{@user.facebook}" %></a>
-<br>
-Twitter: <a href="<%= @user.twitter_url%>" target="_blank"><%= "#{@user.twitter}" %></a>
-<br>
-Github: <a href="<%= @user.github_url %>" target="_blank"><%= "#{@user.github}" %> </a>
-<br>
-<a href"<%= @user.website %>" target="_blank">Website(please enter full url https://...): </a>
-
-<br>
-<%=  "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %>
+<%= link_to "Edit Page", edit_user_path(@user) %>

@@ -15,16 +15,20 @@ class User < ApplicationRecord
   end
 
   def full_name
-    "#{firstname.capitalize} #{lastname.capitalize}"
+    if self.firstname != nil && self.lastname != nil
+      "#{firstname.capitalize} #{lastname.capitalize}"
+    end
   end
 
 
   def twitter_url #turns username into website link
-    if self.twitter[0] == "@"
-      self.twitter[0] = ""
-      "https://twitter.com/#{self.twitter}"
-    else
-      "https://twitter.com/#{self.twitter}"
+    if self.twitter
+      if self.twitter[0] == "@"
+        self.twitter[0] = ""
+        "https://twitter.com/#{self.twitter}"
+      else
+        "https://twitter.com/#{self.twitter}"
+      end
     end
   end
 
@@ -40,6 +44,17 @@ class User < ApplicationRecord
     end
   end
 
+  def random_profile_pic
+    random_number = 1 + rand(98)
+    random_photo = "https://randomuser.me/api/portraits/men/#{random_number}.jpg"
+    self.photo = random_photo
+  end
+
+  def default_msn_profile
+    if self.photo == nil
+      self.photo = "http://files.softicons.com/download/application-icons/msn-icons-by-chris-scholten/png/256x256/default-red.png"
+    end
+  end
 
 
 end
