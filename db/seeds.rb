@@ -41,6 +41,10 @@ Location.create(name: "TY Seven Dials (Timberyard)", post_code: "WC2H 9DL", addr
 
 Location.create(name: "Victoria and Albert - National Art Library", post_code: "SW7 2RL", address: "Cromwell Road, Knightsbridge, London, United Kingdom", free_wifi:"Yes", map_link: "https://www.google.com/maps?cid=11397767969669218160", location_type:"Museum", opening_hours:"10:00 am - 5:45 pm", description:"The Victoria and Albert Museum (V&A) is a world-renowned destination for art and design that is home to over 2.3 million objects chronicling more than 5,000 years of human growth and creativity. In the museum there is a public reference library with free WiFi and over 1 million items from the library's collection to browse. To access the library you can register on the Victoria and Albert Museum's website.", img_url: "/location/victoria.jpg")
 
+#dummy data Batman
+User.create(username: "Bruce", password:"word", firstname: "Bruce", lastname: "Wayne", email: "notbatman@gmail.com", postcode: "BW777", photo: "", experience: "Noob", bio: "A family outing to the cinema ended in tragedy for young Bruce Wayne. Walking homeward, Bruce, his father, Thomas, and mother, Martha, accidentally ventured in",  facebook: "brucewayne", twitter: "brucewayne", github: "suoakira", website: "www.google.com" )
+
+
 User.create(username: "Steve", password:"word" )
 User.create(username: "Pat", password:"word" )
 User.create(username: "Olly", password:"word" )
@@ -54,10 +58,20 @@ User.create(username: "Patper", password:"word" )
 User.create(username: "Pepper", password:"word" )
 User.create(username: "Lemon", password:"word" )
 
-Function.create(topic: "learn", location_id:1)
-Function.create(topic: "dontlearn", location_id: 4)
-Function.create(topic: "havefun", location_id: 3)
-Function.create(topic: "Flatiron", location_id: 1)
+Function.create(topic: "learn", capacity: 3, location_id: 1)
+Function.create(topic: "dontlearn", capacity: 5, location_id: 4)
+Function.create(topic: "havefun", capacity: 2,location_id: 3)
+Function.create(topic: "Flatiron", capacity: 5, location_id: 1)
+
+Function.create(topic: "learn", capacity: 3, location_id: 1)
+Function.create(topic: "dontlearn", capacity: 5, location_id: 2)
+Function.create(topic: "havefun", capacity: 2, location_id: 3)
+Function.create(topic: "Flatiron", capacity: 5, location_id: 1)
+
+Function.create(topic: "learn", capacity: 3, location_id: 2)
+Function.create(topic: "dontlearn", capacity: 5, location_id: 3)
+Function.create(topic: "havefun", capacity: 2,location_id: 1)
+Function.create(topic: "Flatiron", capacity: 1, location_id: 5)
 
 #joinclass's
 
@@ -71,12 +85,17 @@ UserLanguage.create(user_id: 5, language_id: 6)
 UserLanguage.create(user_id: 6, language_id: 6)
 UserLanguage.create(user_id: 7, language_id: 7)
 UserLanguage.create(user_id: 8, language_id: 4)
-
+UserLanguage.create(user_id: 3, language_id: 10)
+UserLanguage.create(user_id: 4, language_id: 5)
+UserLanguage.create(user_id: 5, language_id: 6)
+UserLanguage.create(user_id: 6, language_id: 6)
+UserLanguage.create(user_id: 7, language_id: 7)
+UserLanguage.create(user_id: 8, language_id: 4)
 UserLanguage.create(user_id: 3, language_id: 1)
-UserLanguage.create(user_id: 2, language_id: 1)
-UserLanguage.create(user_id: 3, language_id: 1)
+UserLanguage.create(user_id: 2, language_id: 3)
+UserLanguage.create(user_id: 3, language_id: 2)
 UserLanguage.create(user_id: 1, language_id: 1)
-UserLanguage.create(user_id: 4, language_id: 1)
+UserLanguage.create(user_id: 4, language_id: 9)
 
 
 UserFunction.create(user_id: 1, function_id: 4)
