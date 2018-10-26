@@ -46,8 +46,7 @@
               </div>
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="logged_in_img">
-                  <%# <img src="= User.find(session[:user_id]).photo" alt="=User.find(session[:user_id]).username"> %>
-                  <img src="https://avatars0.githubusercontent.com/u/10384309?s=400&u=f22b84e7c9e949e4a561c96c9b5961e859a5cd44&v=4" alt="">
+                  <img src="<%= User.find(session[:user_id]).photo%>" alt="<%=User.find(session[:user_id]).username%>">
                 </div>
               </a>
             </li>

@@ -1,5 +1,6 @@
 <div class="main">
-  <div class="container">
+  <div class="container functions_list">
+    <h2>Join some of the functions below and HashOut all the things together!</h2>
     <div class="panel-group" id="accordion">
       <% @functions.each do |f| %>
         <div class="panel panel-default" id="panel<%=f.id%>">
@@ -12,11 +13,14 @@
           </div>
           <div id="collapse<%=f.id%>" class="panel-collapse collapse in">
             <div class="panel-body">
-              <p>Topic: <%= f.topic %></p>
-              <p>Goals: <%= f.goals %></p>
-              <p>Time: <%= f.time %></p>
-              <p>Location: <%= f.location.name %></p>
-              <p>Participants</p>
+              <a class="f_l_img" href="<%= location_path(f.location) %>">
+                <img src="<%=f.location.img_url%>" alt="<%=f.location.name%>">
+              </a>
+              <p><span>Topic:</span> <%= f.topic %></p>
+              <p><span>Goals:</span> <%= f.goals %></p>
+              <p><span>Time:</span> <%= f.time %></p>
+              <p><span>Location:</span> <%= f.location.name %></p>
+              <p><span>Participants:</span></p>
               <ul>
                 <% f.users.each do |user| %>
                   <li><%= link_to user.username, user_path(user) %></li>

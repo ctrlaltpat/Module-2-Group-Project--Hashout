@@ -1,15 +1,29 @@
 <div class="main">
-  <div class="container">
+  <div class="container locations_list">
     <div class="row">
-      <div class"col-12">
+    <% @locations.each_with_index do |location, index| %>
+        <% if index == 0 %>
+          <div class="column">
+        <% end %>
+        <a href="<%= location_path(location)%>">
+          <img src="<%= location.img_url %>" alt="<%= location.name %>">
+          <div class="text">
+            <%= location.name %>
+            <br>
+            <span>
+              <%= "#{location.number_of_users} coder{s} have studied at this venue!" %>
+            </span>
+          </div>
+          <div class="overlay">
+          </div>
+        </a>
+        <% if index == (@locations.count / 2)%>
+          </div>
+          <div class="column">
+        <% end %>
 
-          <% @locations.each do |location| %>
-          <%= link_to location.name, location_path(location) %>
-          <%= "Number of coders who have studied at our venue! #{location.number_of_users}." %>
-          <br>
-          <hr>
-          <% end %>
-      </div>
+    <% end %>
+          </div>
     </div>
   </div>
 </div>

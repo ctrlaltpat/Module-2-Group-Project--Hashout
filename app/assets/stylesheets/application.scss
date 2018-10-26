@@ -18,11 +18,11 @@ body {
 }
 .main {
   background: #3159dc;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #8cd5ff, #3159dc);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #8cd5ff, #3159dc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  // background: -webkit-linear-gradient(to bottom, #ffffff, #3159dc);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to bottom, #ffffff, #3159dc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  // padding-bottom: 300px;
+  // background: -webkit-linear-gradient(to bottom, #8cd5ff, #3159dc);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #8cd5ff, #3159dc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #3159dc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffffff, #3159dc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-bottom: 300px;
 }
 
 .main {
@@ -131,6 +131,15 @@ label {
 nav.navbar {
 
 }
+.container.functions_list {
+  padding: 20px;
+}
+.functions_list h2 {
+  text-align: center;
+  font-weight: bold;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
 .container {
   background:#fff;
   border-radius: 10px;
@@ -160,7 +169,8 @@ nav.navbar {
   overflow: hidden;
 }
 .logged_in_img img {
-  max-width: 100%;
+  max-height: 110%;
+  max-width: 110%;
 }
 
 .dropdown-menu {
@@ -177,8 +187,14 @@ nav.navbar {
 .panel-heading {
   position: relative;
 }
+.panel-heading h4 {
+  font-size: 1.3rem;
+}
 .panel {
-  padding-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #FFF;
+  margin-bottom: 10px;
 }
 .panel-heading a.collapsed:after {
   content:"}";
@@ -189,9 +205,29 @@ nav.navbar {
   font-size: 1.21875rem;
 }
 .panel-body {
-  padding-left: 30px;
+  padding: 20px 20px 30px;
+  // background-color: #0144ff14;
+  background-color: #222;
+  border-radius: 10px;
+  font-size: 1rem;
 }
-
+.panel-body span {
+  color: #ff7907;
+}
+.panel-body .f_l_img {
+  display: block;
+  float: right;
+  overflow: hidden;
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+.panel-body .f_l_img img {
+  max-height: 110%;
+  max-width: 110%;
+  border-radius: 10px;
+}
 
 .login-block{
   width:100%;
@@ -213,6 +249,93 @@ nav.navbar {
 .banner-text h2{color:#fff; font-weight:600;}
 // .banner-text h2:after{content:" "; width:100px; height:5px; background:#FFF; display:block; margin-top:20px; border-radius:3px;}
 .banner-text p{color:#fff;}
+
+.container.locations_list {
+  padding: 20px;
+  background: none;
+  box-shadow: unset;
+}
+.locations_list .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.locations_list .column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+}
+
+.locations_list .column a {
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 8px;
+    max-height: 400px;
+    height: auto;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.locations_list .column a img {
+  max-width: 100%;
+}
+
+.locations_list .column a:hover .overlay {
+  opacity: 0.5;
+}
+.locations_list .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.locations_list .text {
+  z-index: 20;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.locations_list .text span {
+  font-size: 0.9rem;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .locations_list .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .locations_list .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
 
 @media (max-width: 992px) {
   .dropdown-toggle::after {
