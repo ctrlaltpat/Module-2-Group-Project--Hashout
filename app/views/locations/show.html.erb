@@ -1,31 +1,45 @@
 
-<br>
 
-"Location Show Page"
-<%= image_tag asset_path("#{@location.img_url}") %>
-<br>
-<br>
-Location Name: <%= @location.name %>
-<br>
-<br>
-<%= @location.post_code %>
-<br>
-<br>
-<%= @location.address %>
-<br>
-<br>
-<%= @location.free_wifi %>
-<br>
-<br>
-<%= @location.map_link %>
-<br>
-<br>
-<%= @location.location_type %>
-<br>
-<br>
-<%= @location.opening_hours %>
-<br>
-<%= @location.description %>
+<div class="main">
+  <div class="container location_show">
+    <div class="text-center align-middle">
+    <h2><%= @location.name %></h2>
 
-<br>
-<%= link_to "Go Back", locations_path %>
+    <div class="img_resize_loca">
+    <%= image_tag asset_path("#{@location.img_url}") %>
+  </div>
+  <div class="lang_description">
+    <p>We have had <b><%= pluralize(@location.functions.count, 'function') %></b></em> at our venue. Be a part of the action and sign up at <%= link_to "Functions", functions_path %>.</p>
+  </div>
+
+  <div class="lang_description">
+    <h4> About Venue: </h4>
+    <%= @location.description %>
+  </div>
+
+    <div class="lang_description_small">
+      <h4>Type: </h4><%= @location.location_type %>
+    </div>
+
+    <div class="lang_description_small">
+      <h4>Opening Hours: </h4><%= @location.opening_hours %>
+    </div>
+
+    <div class="lang_description_small">
+      <iframe src="<%= "#{@location.map_link}" %>", width="420" height="200" frameborder="0" border-radius="50%" style="border:0" allowfullscreen></iframe>
+    </div>
+
+     <div class="lang_description_small">
+       <h4> Location Address: </h4>
+       <%= @location.address %>
+       <%= @location.post_code %>
+     </div>
+
+    <%= link_to "Go Back", locations_path, class: "btn btn-primary" %>
+
+    </div>
+  </div>
+</div>
+
+
+pluralize(@location.functions.count, 'function')

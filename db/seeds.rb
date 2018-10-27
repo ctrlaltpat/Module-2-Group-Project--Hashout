@@ -31,47 +31,41 @@ Language.create(name: "css", description: "CSS is designed to enable the separat
 
 #locations
 
-Location.create(name: "The British Library", post_code: "NW1 2DB", address: "96 Euston Road, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=1770007535949962021", location_type:"Library", opening_hours:"Mon - Fri: 9:30 am - 8:00 pm", description:"Home to 150 million items, including the Magna Carta, the British Library is the world's second greatest book collection, and a must for bookworms and history buffs. Only a short walk from King's Cross, the library is free to enter and a Reader Pass is available for students and members of the public over the age of 18, via online pre-registration (you will need to demonstrate your need to use the library when applying). The tightly controlled reading rooms (water bottles and bags must be dropped off in the cloakroom and pencils are the only writing equipment permitted) are great for quiet study with an inspiring backdrop.", img_url: "/location/the.jpg")
+Location.create(name: "The British Library", post_code: "NW1 2DB", address: "96 Euston Road, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.0850659515836!2d-0.12972788422920822!3d51.52999957963901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3b70171395%3A0x18905479de0fdb25!2sThe+British+Library!5e0!3m2!1sen!2suk!4v1540555938196", location_type:"Library", opening_hours:"Mon - Fri: 9:30 am - 8:00 pm", description:"Home to 150 million items, including the Magna Carta, the British Library is the world's second greatest book collection, and a must for bookworms and history buffs. Only a short walk from King's Cross, the library is free to enter and a Reader Pass is available for students and members of the public over the age of 18, via online pre-registration (you will need to demonstrate your need to use the library when applying). The tightly controlled reading rooms (water bottles and bags must be dropped off in the cloakroom and pencils are the only writing equipment permitted) are great for quiet study with an inspiring backdrop.", img_url: "/location/the.jpg")
 
-Location.create(name: "The BFI Reuben Library", post_code: "SE1 8XT", address: "Belvedere Road, Lambeth, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=16424988554026959751", location_type:"Library", opening_hours:"Mon - Fri: 10:30 am - 7:00 pm", description:"The British Film Institute is a favourite on the South Bank cultural scene with its film festivals and stylish cinema on the doorstep of the Thames. Its Reuben Library is free to the public and you simply need to fill in a registration card upon each visit to access the study spaces. When you get tired of work, enjoy the vast collection of resources about the film and television world here, from books and journals to digitised material from the National Archives.", img_url: "/location/bfi.jpg")
+Location.create(name: "The BFI Reuben Library", post_code: "SE1 8XT", address: "Belvedere Road, Lambeth, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.3616563964342!2d-0.11763144828842004!3d51.506580679535006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2c577c393b%3A0xe3f148110aa24387!2sThe+BFI+Reuben+Library!5e0!3m2!1sen!2suk!4v1540556009676", location_type:"Library", opening_hours:"Mon - Fri: 10:30 am - 7:00 pm", description:"The British Film Institute is a favourite on the South Bank cultural scene with its film festivals and stylish cinema on the doorstep of the Thames. Its Reuben Library is free to the public and you simply need to fill in a registration card upon each visit to access the study spaces. When you get tired of work, enjoy the vast collection of resources about the film and television world here, from books and journals to digitised material from the National Archives.", img_url: "/location/bfi.jpg")
 
-Location.create(name: "Ozone Coffee Roasters", post_code: "EC2 4AQ", address: "11 Leonard Street, Shoreditch, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=14283034858882690770", location_type:"Cafe", opening_hours:"Mon - Fri: 7:00 am - 10:00 pm", description:"Fashionable coffeehouses are in abundance in Shoreditch, but Ozone Coffee Roasters stands out among the rest with good reason. Not only is the coffee delicious, its beautiful light-filled shop has a chic industrial feel and is decked out with plenty of spacious wood countertops, booths and benches for spreading out stacks of books and laptops. Our favourite seats are around its open kitchen and those in the downstairs roasting area.", img_url: "/location/ozone.jpg")
+Location.create(name: "Ozone Coffee Roasters", post_code: "EC2 4AQ", address: "11 Leonard Street, Shoreditch, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3749488722156!2d-0.08904924828789564!3d51.524682379538085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761caf43c8ccb5%3A0xc637888786396ed2!2sOzone+Coffee+Roasters!5e0!3m2!1sen!2suk!4v1540556059964", location_type:"Cafe", opening_hours:"Mon - Fri: 7:00 am - 10:00 pm", description:"Fashionable coffeehouses are in abundance in Shoreditch, but Ozone Coffee Roasters stands out among the rest with good reason. Not only is the coffee delicious, its beautiful light-filled shop has a chic industrial feel and is decked out with plenty of spacious wood countertops, booths and benches for spreading out stacks of books and laptops. Our favourite seats are around its open kitchen and those in the downstairs roasting area.", img_url: "/location/ozone.jpg")
 
-Location.create(name: "TY Seven Dials (Timberyard)", post_code: "WC2H 9DL", address: "7 Upper St Martin's Lane, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=4607175792713443718", location_type:"Cafe", opening_hours:"Mon - Fri: 8:00 am - 6:00 pm", description:"'Tea, coffee, work and play. Reimagined' is the slogan for Timberyard, meaning workers are welcomed with a smile at this quirky coffeehouse. With two venues to choose from, the study cafés are renowned for their work-conducive environment and are usually full of young trendies typing busily away at their laptops into the evening, with a weekday 8pm closing time. Arrive early for the best seats and enjoy their buttered toast with jam; as far as simple breakfasts go, it's hard to beat.", img_url: "/location/ty.jpg")
+Location.create(name: "TY Seven Dials", post_code: "WC2H 9DL", address: "7 Upper St Martin's Lane, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.018527864194!2d-0.12956274828824635!3d51.51287607953617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604cd0ed11587%3A0x3feff9f93e76a986!2sTY+Seven+Dials!5e0!3m2!1sen!2suk!4v1540556098787", location_type:"Cafe", opening_hours:"Mon - Fri: 8:00 am - 6:00 pm", description:"'Tea, coffee, work and play. Reimagined' is the slogan for Timberyard, meaning workers are welcomed with a smile at this quirky coffeehouse. With two venues to choose from, the study cafés are renowned for their work-conducive environment and are usually full of young trendies typing busily away at their laptops into the evening, with a weekday 8pm closing time. Arrive early for the best seats and enjoy their buttered toast with jam; as far as simple breakfasts go, it's hard to beat.", img_url: "/location/ty.jpg")
 
-Location.create(name: "Victoria and Albert - National Art Library", post_code: "SW7 2RL", address: "Cromwell Road, Knightsbridge, London, United Kingdom", free_wifi:"Yes", map_link: "https://www.google.com/maps?cid=11397767969669218160", location_type:"Museum", opening_hours:"10:00 am - 5:45 pm", description:"The Victoria and Albert Museum (V&A) is a world-renowned destination for art and design that is home to over 2.3 million objects chronicling more than 5,000 years of human growth and creativity. In the museum there is a public reference library with free WiFi and over 1 million items from the library's collection to browse. To access the library you can register on the Victoria and Albert Museum's website.", img_url: "/location/victoria.jpg")
+Location.create(name: "Victoria and Albert - National Art Library", post_code: "SW7 2RL", address: "Cromwell Road, Knightsbridge, London, United Kingdom", free_wifi:"Yes", map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.9024832461378!2d-0.17437574828870206!3d51.496656979533384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760543b17e57c3%3A0x4b5fcec04e7baae6!2sNational+Art+Library!5e0!3m2!1sen!2suk!4v1540556146209", location_type:"Museum", opening_hours:"10:00 am - 5:45 pm", description:"The Victoria and Albert Museum (V&A) is a world-renowned destination for art and design that is home to over 2.3 million objects chronicling more than 5,000 years of human growth and creativity. In the museum there is a public reference library with free WiFi and over 1 million items from the library's collection to browse. To access the library you can register on the Victoria and Albert Museum's website.", img_url: "/location/victoria.jpg")
 
 #dummy data Batman
-User.create(username: "Bruce", password:"word", firstname: "Bruce", lastname: "Wayne", email: "notbatman@gmail.com", postcode: "BW777", photo: "", experience: "Noob", bio: "A family outing to the cinema ended in tragedy for young Bruce Wayne. Walking homeward, Bruce, his father, Thomas, and mother, Martha, accidentally ventured in",  facebook: "brucewayne", twitter: "brucewayne", github: "suoakira", website: "www.google.com" )
+User.create(username: "Bruce", password:"word", firstname: "Bruce", lastname: "Wayne", email: "notbatman@gmail.com", postcode: "BW777", photo: "/default/oliver.png", experience: "Noob", bio: "A family outing to the cinema ended in tragedy for young Bruce Wayne. Walking homeward, Bruce, his father, Thomas, and mother, Martha, accidentally ventured in",  facebook: "brucewayne", twitter: "brucewayne", github: "suoakira", website: "www.google.com" )
 
 
-User.create(username: "Steve", password:"word" )
-User.create(username: "Pat", password:"word" )
-User.create(username: "Olly", password:"word" )
-User.create(username: "John", password:"word" )
-User.create(username: "Steve", password:"word")
-User.create(username: "Simon", password:"word" )
-User.create(username: "Lopez", password:"word" )
-User.create(username: "Johnsalty", password:"word" )
-User.create(username: "Stevepopcorn", password:"word")
-User.create(username: "Patper", password:"word" )
-User.create(username: "Pepper", password:"word" )
-User.create(username: "Lemon", password:"word" )
+User.create(username: "Steve", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Pat", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Olly", password:"word", photo: "/default/oliver.png" )
+User.create(username: "John", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Steve", password:"word", photo: "/default/oliver.png")
+User.create(username: "Simon", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Lopez", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Johnsalty", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Stevepopcorn", password:"word", photo: "/default/oliver.png")
+User.create(username: "Patper", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Pepper", password:"word", photo: "/default/oliver.png" )
+User.create(username: "Lemon", password:"word", photo: "/default/oliver.png" )
 
-Function.create(topic: "learn", capacity: 3, location_id: 1)
-Function.create(topic: "dontlearn", capacity: 5, location_id: 4)
-Function.create(topic: "havefun", capacity: 2,location_id: 3)
-Function.create(topic: "Flatiron", capacity: 5, location_id: 1)
+Function.create(topic: "Object Oriented Programming", time: "10/26/2018 6:30 PM", goals: "Learn how to implement O.O.P",  capacity: 3, location_id: 1)
+Function.create(topic: "Use the Rest Operator with Function Parameters", time: "10/28/2018 7:00 PM", goals: "Make more flexible functions, introduces the rest operator for function parameters", capacity: 4, location_id: 2)
+Function.create(topic: "Use Responsive Design with Bootstrap Fluid Containers", time: "11/01/2018 3:00 PM", goals: "Use bootstrap, to build a responsive website layout.", capacity: 10, location_id: 3)
+Function.create(topic: "Initializing Variables with the Assignment Operator", time: "11/03/2018 2:30 PM", goals: "Learn how to use JavaScript variables, and how to operate on them.", capacity: 2, location_id: 4)
+Function.create(topic: "Manipulate Arrays", time: "11/06/2018 5:20 PM", goals: "Use the push(), pop(), shift(), unshift()", capacity: 2, location_id: 5)
 
-Function.create(topic: "learn", capacity: 3, location_id: 1)
-Function.create(topic: "dontlearn", capacity: 5, location_id: 2)
-Function.create(topic: "havefun", capacity: 2, location_id: 3)
-Function.create(topic: "Flatiron", capacity: 5, location_id: 1)
 
-Function.create(topic: "learn", capacity: 3, location_id: 2)
-Function.create(topic: "dontlearn", capacity: 5, location_id: 3)
-Function.create(topic: "havefun", capacity: 2,location_id: 1)
-Function.create(topic: "Flatiron", capacity: 1, location_id: 5)
+
 
 #joinclass's
 

@@ -24,8 +24,15 @@
       <br>
       <%= f.label :bio, "Bio" %>
       <%= f.text_area :bio, class: 'form-control' %>
-    <p>Social Media</p>
-
+      <%= f.label "Please select the languages you are currently learning: " %>
+      <br>
+      <%= f.collection_check_boxes :language_ids, Language.all, :id, :name  do |b| %>
+        <div class="selection_checkbox">
+          <%= b.label %> <%= b.check_box%>
+        </div>
+      <% end %>
+      <br><br>
+      <h4>Social Media</h4>
       <br>
       <%= f.label :facebook, "Facebook Username:" %>
       <%= f.text_field :facebook, class: 'form-control' %>
@@ -39,7 +46,7 @@
       <%= f.label :website %>
       <%= f.text_field :website, class: 'form-control' %>
       <br>
-      <%= f.submit 'Save', class: 'form-control btn' %>
+      <%= f.submit 'Save', class: 'form-control btn btn-primary' %>
     <% end %>
   </div>
 </div>

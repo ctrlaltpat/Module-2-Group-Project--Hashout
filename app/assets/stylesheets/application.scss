@@ -28,6 +28,40 @@ body {
 .main {
   padding: 30px 20px 50px;
 }
+.languages_image {
+  text-align: center;
+}
+.img_resize {
+  display: inline-block;
+  width: auto;
+  height: 60px;
+  margin: 10px;
+}
+
+.img_resize img {
+  max-height: 100%;
+}
+
+.img_resize_loca {
+  display: inline-block;
+  width: auto;
+  height: 280px;
+  margin: 10px;
+}
+
+.img_resize_loca img {
+  max-height: 100%;
+}
+
+.lang_description {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.lang_description_small {
+  padding: 5px;
+}
 
 .latest_functions {
   text-align: center;
@@ -36,7 +70,37 @@ body {
   margin: 5px;
   font-weight: bold;
 }
-
+.container.function_show {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px 20px;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  text-align: center !important;
+  color:  #FFFFFF;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.9);
+}
+.function_show .function_content {
+  z-index: 10;
+}
+.function_show .underlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+.container.new_function_form {
+  max-width: 600px;
+  padding: 30px 20px;
+}
+.input-group [data-toggle="datetimepicker"] {
+  position: absolute;
+  left: 95%;
+}
 .footer-bottom {
   background-color: #222;
   width: 100%;
@@ -44,6 +108,10 @@ body {
   clear: both;
   // position: fixed;
   // bottom: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+    width: 60px;
+    height: 45px;
 }
 
 .footer-bottom .container {
@@ -162,15 +230,22 @@ nav.navbar {
   color: #FFFFFF;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
-.logged_in_img {
+.logged_in_img, .function_user_img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
 }
-.logged_in_img img {
+.function_user_img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logged_in_img img, .function_user_img img {
   max-height: 110%;
   max-width: 110%;
+}
+.container.location_show {
+  padding-bottom: 30px;
 }
 
 .dropdown-menu {
@@ -210,6 +285,7 @@ nav.navbar {
   background-color: #222;
   border-radius: 10px;
   font-size: 1rem;
+  margin: 0 30px;
 }
 .panel-body span {
   color: #ff7907;
@@ -218,17 +294,19 @@ nav.navbar {
   display: block;
   float: right;
   overflow: hidden;
-  height: 200px;
+  height: auto;
   width: 300px;
   border-radius: 10px;
   text-align: center;
 }
 .panel-body .f_l_img img {
-  max-height: 110%;
+  max-height: 100%;
   max-width: 110%;
   border-radius: 10px;
 }
-
+.clear {
+  clear: both;
+}
 .login-block{
   width:100%;
   padding : 50px 0;
@@ -317,6 +395,16 @@ nav.navbar {
 
 .locations_list .text span {
   font-size: 0.9rem;
+}
+
+.selection_checkbox {
+  display: inline-block;
+  margin: 5px;
+}
+.selection_checkbox input[type="checkbox"] {
+  margin: 10px;
+  position: relative;
+  bottom: 2px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    authorized_for(params[:id])
+    # authorized_for(params[:id])
   end
 
   def edit
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :firstname, :lastname, :email, :postcode, :photo, :experience, :bio, :facebook, :twitter, :github, :website)
+    params.require(:user).permit(:username, :password, :firstname, :lastname, :email, :postcode, :photo, :experience, :bio, :facebook, :twitter, :github, :website, language_ids: [])
   end
 
   def set_user

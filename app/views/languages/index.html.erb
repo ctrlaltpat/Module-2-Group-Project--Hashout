@@ -1,10 +1,20 @@
 <div class="main">
-  <br>
-
-    <% @languages.each do |language| %>
-      <%= link_to language.name, language_path(language)  %>
-      <%= "#{pluralize(language.number_of_users, 'coder')} studying this language!" %>
+    <div class="container">
+      <div class="lang_description text-center">
+        <h2>10 Best Programming Languages you can learn in 2018 </h2>
+      </div>
       <br>
-      <hr>
-    <% end %>
+      <% @languages.each do |language| %>
+        <div class="text-center">
+          <div class="img_resize">
+            <%= image_tag asset_path("#{language.img_url}") %>
+          </div>
+          <div class="lang_description">
+          <%= "#{pluralize(language.number_of_users, 'coder')} studying " %>
+          <%= link_to language.name, language_path(language)  %>
+          <hr>
+        </div>
+      </div>
+      <% end %>
+    </div>
 </div>

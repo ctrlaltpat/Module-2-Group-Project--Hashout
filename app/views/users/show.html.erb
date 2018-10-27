@@ -23,14 +23,24 @@
       <a href="<%= @user.twitter_url%>" target="_blank"><i class="fab fa-twitter"></i></a>
 
       <a href="<%= @user.github_url %>" target="_blank"><i class="fab fa-github"></i></a>
+
+      <a href="<%= @user.website %>" target="_blank"><i class="fas fa-link"></i></a>
     </div>
     <div class="user_bio">
       <h4>Experience:</h4>
       <p><%= @user.experience %></p>
       <h4>Bio:</h4>
       <p><%= @user.bio %></p>
-
-      <a href"<%= @user.website %>" target="_blank"> </a>
+      <h4>Languages:</h4>
+      <div class="languages_images">
+          <% @user.languages.each do |l| %>
+            <div class="img_resize">
+              <a href="<%= language_path(l)%>">
+                <img src="<%= l.img_url %>" alt="<%= l.name %>">
+              </a>
+            </div>
+          <% end %>
+      </div>
     </div>
 
     <div class="button-group user_buttons">

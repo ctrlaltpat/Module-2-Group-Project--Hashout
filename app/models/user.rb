@@ -58,4 +58,11 @@ class User < ApplicationRecord
     end
   end
 
+
+  # def user_languages_photos #all languages a user studys in photo form
+  #   self.languages.map do |language|
+  #     language.img_url
+  #   end
+  # end
+
 end
